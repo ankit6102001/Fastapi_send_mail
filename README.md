@@ -11,3 +11,22 @@ Make sure you have Python installed. You can install the required dependencies u
 
 ```bash
 pip install -r requirements.txt
+
+
+uvicorn app.main:app --host 127.0.0.1 --reload
+
+GET /
+
+POST /send-email
+
+{
+  "to": "recipient@example.com",
+  "subject": "Your Subject",
+  "content": "Email Content"
+}
+
+{
+  "status": 200,
+  "message": "Email has been scheduled"
+}
+
